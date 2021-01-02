@@ -1,5 +1,5 @@
-var mysql = require("mysql");
-
+// var mysql = require("mysql");
+var mysql = require("pgsql");
 // var connection = mysql.createConnection({
 //   host: "localhost",
 //   port: 3306,

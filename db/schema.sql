@@ -11,3 +11,9 @@ CREATE TABLE burgers (
     devoured BOOL DEFAULT false,
     PRIMARY KEY (id)
 );
+
+-- CREATE TABLE burgers (
+--     id SERIAL,
+--     burger_name VARCHAR(255),
+--     devoured BOOL DEFAULT false,
+-- );
