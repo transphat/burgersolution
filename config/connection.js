@@ -1,5 +1,5 @@
-// var mysql = require("mysql");
-var mysql = require("pgsql");
+var mysql = require("mysql");
+// var mysql = require("pgsql");
 // var connection = mysql.createConnection({
 //   host: "localhost",
 //   port: 3306,
@@ -8,13 +8,14 @@ var mysql = require("pgsql");
 //   database: "burgers_db"
 // });
 
+//mysql://be82a3cb366eeb:bf2d31ae@us-cdbr-east-02.cleardb.com/heroku_96efed99ef32e01?reconnect=true
 
 var connection = mysql.createConnection({
-  host: "ec2-34-194-198-238.compute-1.amazonaws.com",
-  port: 5432,
-  user: "luswetbexetmyn",
-  password: "d65c67f1e0592a9dd9379bfdfc8de80d00a47eaf690997955a6a7954ac59e083",
-  database: "d597v9tdufv33u"
+  host: "us-cdbr-east-02.cleardb.com",
+  port: 3306,
+  user: "be82a3cb366eeb",
+  password: "bf2d31ae",
+  database: "heroku_96efed99ef32e01"
 });
 
 
