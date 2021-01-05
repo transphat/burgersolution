@@ -10,21 +10,29 @@ var mysql = require("mysql");
 
 //mysql://be82a3cb366eeb:bf2d31ae@us-cdbr-east-02.cleardb.com/heroku_96efed99ef32e01?reconnect=true
 
-var connection = mysql.createConnection({
+// var connection = mysql.createConnection({
+//   host: "us-cdbr-east-02.cleardb.com",
+//   //port: 3306,
+//   user: "be82a3cb366eeb",
+//   password: "bf2d31ae",
+//   database: "heroku_96efed99ef32e01"
+// });
+
+var connection = mysql.createPool({
   host: "us-cdbr-east-02.cleardb.com",
-  port: 3306,
+  //port: 3306,
   user: "be82a3cb366eeb",
   password: "bf2d31ae",
   database: "heroku_96efed99ef32e01"
-});
+})
 
 
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error("error connecting: " + err.stack);
+//     return;
+//   }
+//   console.log("connected as id " + connection.threadId);
+// });
 
 module.exports = connection;
